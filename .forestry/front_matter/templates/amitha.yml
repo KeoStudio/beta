@@ -1,0 +1,57 @@
+---
+label: Amitha
+hide_body: false
+is_partial: false
+fields:
+- name: layout
+  label: Layout
+  type: text
+  hidden: true
+  default: post
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: description
+  label: Description
+  type: text
+  hidden: false
+  default: ''
+- name: images
+  label: Images
+  type: field_group
+  fields:
+  - name: main
+    label: Main
+    type: file
+    hidden: false
+    default: ''
+  - name: thumbnail
+    label: Thumbnail
+    type: file
+    hidden: false
+    default: ''
+  - name: items
+    label: Items
+    type: image_gallery
+    hidden: false
+    default: ''
+  hidden: false
+  default: ''
+pages:
+- _portfolio/aninda.md
+- _portfolio/ramona---natural-light-portrait-photo-session.md
+- _portfolio/melbourne-sky-x-vsco-by-keo-studio-photography.md
+- _portfolio/aninda-part-2.md
+- _portfolio/milk-bath-photosession.md
+- _portfolio/amanda-neon-photo-shoot.md
+- _portfolio/by-samantha-melbourne-dresses---lookbook.md
+- _portfolio/jacinda-patty---dance-and-portrait-photo-shoot.md
+- _portfolio/corinna---natural-light-photography-melbourne.md
+- _portfolio/katya---indoor-portrait-photography.md
+- _portfolio/elizabeth---golden-hour-photo-session.md
+- _portfolio/ira---model-photo-shoot-in-melbourne.md
+- _portfolio/sveta---helios-retro-manual-lense-photography.md
+- _portfolio/melbourne-spring-fashion-week-2015.md
+- _portfolio/maria---absolutely-magical-photo-session.md

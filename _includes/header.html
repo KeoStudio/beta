@@ -1,0 +1,140 @@
+<!-- Masthead ============================================= -->
+<header id="masthead" class="site-header clearfix">
+  <div class="header-wrap">
+
+    <!-- Top Header============================================= -->
+    <div class="top-header">
+
+      <!-- Main Header============================================= -->
+      <div id="sticky-header" class="clearfix">
+        <div class="main-header clearfix">
+          <div id="site-branding"><a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="340"
+                height="180" src="{{ site.baseurl }}{{ site.settings.logo }}" class="custom-logo" alt="Keo Studio Photography"
+                itemprop="logo" /></a>
+            <div id="site-detail">
+              <h1 id="site-title"> <a href="/" title="{{ site.title }}" rel="home"> {{ site.title }} </a>
+              </h1> <!-- end .site-title -->
+              <div id="site-description"> {{ site.description }} </div> <!-- end #site-description -->
+
+            </div>
+          </div>
+          <!-- Main Nav ============================================= -->
+          <nav id="site-navigation" class="main-navigation clearfix" role="navigation">
+
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+              <span class="line-bar"></span>
+            </button>
+            <!-- end .menu-toggle -->
+
+            <ul id="primary-menu" class="menu nav-menu">
+              <li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-35"><a
+                  href="/">Home</a></li>
+              {% for otherPage in site.pages %}
+              {% if otherPage.title %}
+              <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a
+                  href="{{ otherPage.url | prepend: site.baseurl }}">{{ otherPage.title }}</a></li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </nav> <!-- end #site-navigation -->
+          <div class="right-toggle">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+              <span class="line-bar"></span>
+            </button>
+            <!-- end .menu-toggle -->
+            <div id="search-toggle" class="header-search"></div>
+            <div class="show-menu-toggle">
+              <span class="sn-text">Menu Button</span>
+              <span class="bars"></span>
+            </div>
+          </div>
+          <!-- end .right-toggle -->
+        </div> <!-- end .main-header -->
+      </div> <!-- end #sticky-header -->
+    </div> <!-- end .top-header -->
+    <div id="search-box" class="clearfix">
+      <div class="search-x"></div>
+      <form class="search-form" action="/" method="get">
+        <input type="search" name="s" class="search-field" placeholder="Search &hellip;" autocomplete="off" />
+        <button type="submit" class="search-submit"><i class="fa fa-search"></i></button>
+      </form> <!-- end .search-form -->
+    </div> <!-- end #search-box -->
+    <div class="side-menu-wrap">
+      <div class="side-menu">
+        <div class="hide-menu-toggle">
+          <span class="bars"></span>
+        </div>
+
+        <div id="site-branding">
+          <a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="340" height="180" src="/media/logo.png"
+              class="custom-logo" alt="Keo Studio Photography" itemprop="logo" /></a> </div>
+        <!-- end #site-branding -->
+        <nav class="side-nav-wrap">
+          <ul class="side-menu-list">
+            <li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-145"><a
+                href="/">Home</a></li>
+            {% for otherPage in site.pages %}
+            {% if otherPage.title %}
+            <li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a
+                href="{{ otherPage.url | prepend: site.baseurl }}">{{ otherPage.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </nav><!-- end .side-nav-wrap -->
+        <div class="social-links clearfix">
+          <ul>
+            <li id="menu-item-130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"><a
+                href="http://facebook.com/keostudio"><span class="screen-reader-text">facebook</span></a></li>
+            <li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a
+                href="http://instagram.com/keo_photo_studio"><span class="screen-reader-text">instagram</span></a></li>
+          </ul>
+        </div><!-- end .social-links -->
+        <div class="side-widget-tray">
+          <section id="media_gallery-2" class="widget widget_media_gallery">
+            <h3 class="widget-title">Gallery</h3>
+            <div data-carousel-extra='{"blog_id":35,"permalink":"https:\/\/demo.themefreesia.com\/photograph\/"}' id='gallery-1'
+              class='gallery galleryid-6 gallery-columns-3 gallery-size-thumbnail'>
+              {% for item in site.portfolio %}
+              <figure class='gallery-item'>
+                <div class='gallery-icon landscape'>
+                  <a href='/featured-image-18/'><img width="150" height="150" src="{{ site.baseurl }}{{ item.images.thumbnail }}"
+                      class="attachment-thumbnail size-thumbnail" alt="" data-permalink="{{ site.baseurl }}{{ item.url }}" /></a>
+                </div>
+              </figure>
+              {% endfor %}
+            </div>
+          </section>
+        </div> <!-- end .side-widget-tray -->
+      </div><!-- end .side-menu -->
+    </div><!-- end .side-menu-wrap -->
+  </div><!-- end .header-wrap -->
+  <div class="header-social-block">
+    <div class="social-links clearfix">
+      <ul>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"><a href="http://facebook.com/keostudio"><span
+              class="screen-reader-text">facebook</span></a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134"><a href="http://instagram.com/keo_photo_studio"><span
+              class="screen-reader-text">instagram</span></a></li>
+      </ul>
+    </div><!-- end .social-links -->
+  </div><!-- end .header-social-block -->
+  <!-- Video and image header ============================================= -->
+  <div class="vid-thumb-tray clearfix">
+    <div class="vid-thumb-bg jarallax" title="Mansory, Fullscreen Gallery and Portfolio Templates" data-jarallax style="background-image:url('{{ site.baseurl }}{{ page.images.main.url }}');">
+      <div class="vid-thumb-content">
+        <div class="vid-thumb-text">
+          <h2 class="vid-thumb-title"><a href="/2018/04/26/mansory-fullscreen-gallery-and-portfolio-templates/" title="Mansory, Fullscreen Gallery and Portfolio Templates">Mansory,
+              Fullscreen Gallery and Portfolio Templates</a></h2>
+          <!-- .vid-thumb-title -->
+          <span class="vid-thumb-text-area">
+            <p>The new way to show your lens creativity.</p>
+          </span>
+          <!-- end .vid-thumb-text -->
+        </div>
+        <!-- end .vid-thumb-text-content -->
+      </div>
+      <!-- end .vid-thumb-content -->
+    </div> <!-- end .vid-thumb-bg -->
+  </div><!-- end .vid-thumb-tray -->
+  <div class="scroll-down"><span></span><span></span><span></span></div><!-- Scroll Down Button -->
+</header> <!-- end #masthead -->

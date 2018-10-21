@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<!-- Main Page Start ============================================= -->
+<div class="site-content-contain">
+    <div id="content" class="site-content">
+      <main id="main" class="site-main">
+        
+        <div class="featured-gallery-wrap show-fgt-hover   ">
+          <div class="featured-gallery-content  clearfix">
+            <div class="featured-gallery-header">
+              <h2 class="featured-gallery-title freesia-animation fadeInDown">{{ page.title }}</h2>
+              <p class="blog-post-meta">{{ page.description }}</p>
+              <div class="text" style="text-align: left; padding: 20px;">
+                  {{ content }}
+              </div>
+              <!-- <div class="filters filter-button freesia-animation fadeInDown">
+                <ul>
+                  <li class="active" data-category="*">All</li>
+                  <li data-category=".tag-fashion">Fashion</li>
+                  <li data-category=".tag-lifestyle">Lifestyle</li>
+                  <li data-category=".tag-nature">Nature</li>
+                  <li data-category=".tag-portraits">Portraits</li>
+                </ul>
+              </div> end .filter-button-group -->
+            </div><!-- end .featured-gallery-header -->
+  
+            <div class="featured-gallery gallery-col-4">
+              {% for item in page.images.items %}
+              <article class="featured-item post-111 post type-post status-publish format-image has-post-thumbnail hentry category-gallery tag-fashion tag-people tag-portraits post_format-post-format-image">
+                <div class="post-gallery-wrap freesia-animation fadeInUp">
+                  <div class="featured-image-content">
+                    <a href="{{ site.baseurl }}{{ item }}" class="popup-image" data-fancybox="post-gallery" data-title="{{ page.title }}">
+                      <img src="{{ site.baseurl }}{{ item }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
+                       alt="" data-orig-size="" />
+                    </a>
+                  </div><!-- end.featured-image-content  -->
+                </div> <!-- end.post-gallery-wrap -->
+              </article> <!-- end .post -->
+              {% endfor %}
+            </div> <!-- end .featured-gallery -->
+          </div> <!-- end .featured-gallery-content -->
+        </div> <!-- end .featured-gallery-wrap -->
+      </main> <!-- end #main -->
+    </div>
+  </div>

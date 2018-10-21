@@ -1,0 +1,21 @@
+# Site settings
+title: KEO Studio Photography in Melbourne - by Svetlana Pelin
+description: Commercial photographer in Melbourne
+baseurl: 
+url: 
+
+# Build settings
+markdown: kramdown
+
+highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
+settings:
+  logo: /media/logo.png

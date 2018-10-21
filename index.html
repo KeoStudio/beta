@@ -1,0 +1,52 @@
+---
+layout: default
+images:
+  main: 
+    url: "/media/12 helios sveta 1.jpg"
+---
+<!-- Main Page Start ============================================= -->
+<div class="site-content-contain">
+	<div id="content" class="site-content">
+
+		<main id="main" class="site-main">
+			<div class="featured-gallery-wrap show-fgt-hover   ">
+				<div class="featured-gallery-content  clearfix">
+					<div class="featured-gallery-header">
+						<h2 class="featured-gallery-title freesia-animation fadeInDown">CREATIVE GALLERY</h2>
+						<!-- <div class="filters filter-button freesia-animation fadeInDown">
+							<ul>
+								<li class="active" data-category="*">All</li>
+								<li data-category=".tag-fashion">Fashion</li>
+								<li data-category=".tag-lifestyle">Lifestyle</li>
+								<li data-category=".tag-nature">Nature</li>
+								<li data-category=".tag-portraits">Portraits</li>
+							</ul>
+						</div> end .filter-button-group -->
+					</div><!-- end .featured-gallery-header -->
+
+					<div class="featured-gallery gallery-col-4">
+						{% for item in site.portfolio %}
+						<article class="featured-item post-111 post type-post status-publish format-image has-post-thumbnail hentry category-gallery tag-fashion tag-people tag-portraits post_format-post-format-image">
+							<div class="post-gallery-wrap freesia-animation fadeInUp">
+								<div class="featured-image-content">
+									<a href="{{ site.baseurl }}{{ item.images.main.url }}" class="popup-image" data-fancybox="post-gallery" data-title="{{ item.title }}">
+										<img src="{{ site.baseurl }}{{ item.images.main.url }}" width="{{ item.images.main.width }}" height="{{ item.images.main.height }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image"
+										 alt="" data-orig-size="" />
+									</a>
+								</div><!-- end.featured-image-content  -->
+								<div class="featured-text-content">
+									<h3 class="featured-title">
+										<a title="{{ item.title }}" href="{{ site.baseurl }}{{ item.url }}">
+											{{ item.title }}
+										</a>
+									</h3> <!-- end.featured-title -->
+								</div> <!-- end .featured-text-content -->
+							</div> <!-- end.post-gallery-wrap -->
+						</article> <!-- end .post -->
+						{% endfor %}
+					</div> <!-- end .featured-gallery -->
+				</div> <!-- end .featured-gallery-content -->
+			</div> <!-- end .featured-gallery-wrap -->
+		</main> <!-- end #main -->
+	</div>
+</div>
