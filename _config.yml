@@ -1,7 +1,8 @@
 # Site settings
 title: KEO Studio Photography in Melbourne - by Svetlana Pelin
 description: Commercial photographer in Melbourne
-baseurl: "/"
+baseurl: 
+url:
 
 # Build settings
 markdown: kramdown
